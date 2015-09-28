@@ -1,14 +1,14 @@
 import test from 'tape';
 import any from './any';
 
-test(`No argument returns \`undefined\``, (assert) => {
+test(`\`any()\` returns \`undefined\``, (assert) => {
   const expected = void 0;
   assert.equal(any(), expected,
     `Failed no argument.`);
   assert.end();
 });
 
-test(`\`undefined\` returns \`undefined\``, (assert) => {
+test(`\`any(undefined)\` returns \`undefined\``, (assert) => {
   const value = void 0;
   const expected = value;
   assert.equal(any(value), expected,
@@ -16,7 +16,7 @@ test(`\`undefined\` returns \`undefined\``, (assert) => {
   assert.end();
 });
 
-test(`\`null\` returns \`null\``, (assert) => {
+test(`\`any(null)\` returns \`null\``, (assert) => {
   const value = null;
   const expected = value;
   assert.equal(any(value), expected,
@@ -24,7 +24,7 @@ test(`\`null\` returns \`null\``, (assert) => {
   assert.end();
 });
 
-test(`\`Function\` returns \`Function\``, (assert) => {
+test(`\`any(Function)\` returns \`Function\``, (assert) => {
   const value = () => {};
   const expected = value;
   assert.equal(any(value), expected,
@@ -32,7 +32,7 @@ test(`\`Function\` returns \`Function\``, (assert) => {
   assert.end();
 });
 
-test(`\`String\` returns \`String\``, (assert) => {
+test(`\`any(String)\` returns \`String\``, (assert) => {
   const value = `a string`;
   const expected = value;
   assert.equal(any(value), expected,
@@ -40,7 +40,7 @@ test(`\`String\` returns \`String\``, (assert) => {
   assert.end();
 });
 
-test(`\`Object\` returns \`Object\``, (assert) => {
+test(`\`any(Object)\` returns \`Object\``, (assert) => {
   const value = {};
   const expected = value;
   assert.equal(any(value), expected,
@@ -48,7 +48,7 @@ test(`\`Object\` returns \`Object\``, (assert) => {
   assert.end();
 });
 
-test(`\`Boolean\` returns \`Boolean\``, (assert) => {
+test(`\`any(Boolean)\` returns \`Boolean\``, (assert) => {
   const value = true;
   const expected = value;
   assert.equal(any(value), expected,
@@ -56,7 +56,7 @@ test(`\`Boolean\` returns \`Boolean\``, (assert) => {
   assert.end();
 });
 
-test(`\`Number\` returns \`Number\``, (assert) => {
+test(`\`any(Number)\` returns \`Number\``, (assert) => {
   const value = 1;
   const expected = value;
   assert.equal(any(value), expected,
