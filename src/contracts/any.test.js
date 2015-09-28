@@ -10,56 +10,67 @@ test(`\`any()\` returns \`undefined\``, (assert) => {
 
 test(`\`any(undefined)\` returns \`undefined\``, (assert) => {
   const value = void 0;
-  const expected = value;
-  assert.equal(any(value), expected,
+  assert.equal(any(value), value,
     `Failed \`undefined\`.`);
   assert.end();
 });
 
 test(`\`any(null)\` returns \`null\``, (assert) => {
   const value = null;
-  const expected = value;
-  assert.equal(any(value), expected,
+  assert.equal(any(value), value,
     `Failed \`null\`.`);
   assert.end();
 });
 
 test(`\`any(Function)\` returns \`Function\``, (assert) => {
   const value = () => {};
-  const expected = value;
-  assert.equal(any(value), expected,
+  assert.equal(any(value), value,
     `Failed \`Function\`.`);
   assert.end();
 });
 
 test(`\`any(String)\` returns \`String\``, (assert) => {
-  const value = `a string`;
-  const expected = value;
-  assert.equal(any(value), expected,
+  const value = new String(`a string`);
+  assert.equal(any(value), value,
     `Failed \`String\`.`);
   assert.end();
 });
 
 test(`\`any(Object)\` returns \`Object\``, (assert) => {
   const value = {};
-  const expected = value;
-  assert.equal(any(value), expected,
+  assert.equal(any(value), value,
     `Failed \`Object\`.`);
   assert.end();
 });
 
 test(`\`any(Boolean)\` returns \`Boolean\``, (assert) => {
-  const value = true;
-  const expected = value;
-  assert.equal(any(value), expected,
-    `Failed \`Boolean\`.`);
+  let value = new Boolean(true);
+  assert.equal(any(value), value,
+    `Failed \`Boolean(true)\`.`);
+  value = new Boolean(false);
+  assert.equal(any(value), value,
+    `Failed \`Boolean(false)\`.`);
   assert.end();
 });
 
 test(`\`any(Number)\` returns \`Number\``, (assert) => {
-  const value = 1;
-  const expected = value;
-  assert.equal(any(value), expected,
-    `Failed \`Number\`.`);
+  let value = new Number(0);
+  assert.equal(any(value), value,
+    `Failed \`Number(0)\`.`);
+  value = new Number(1);
+  assert.equal(any(value), value,
+    `Failed \`Number(1)\`.`);
+  value = new Number(2);
+  assert.equal(any(value), value,
+    `Failed \`Number(2)\`.`);
+  value = new Number(123);
+  assert.equal(any(value), value,
+    `Failed \`Number(123)\`.`);
+  value = new Number(-123);
+  assert.equal(any(value), value,
+    `Failed \`Number(-123)\`.`);
+  value = new Number(123.4567);
+  assert.equal(any(value), value,
+    `Failed \`Number(123.4567)\`.`);
   assert.end();
 });
