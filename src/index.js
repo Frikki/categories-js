@@ -1,6 +1,7 @@
 import any from './contracts/any';
 import func from './contracts/func';
 import str from './contracts/str';
+import obj from './contracts/obj';
 
 module.exports = {
   /**
@@ -28,4 +29,13 @@ module.exports = {
    * @function str
    */
   str,
+
+  /**
+   * A contract that only allows objects.
+   * @param {Function} value The value to test.
+   * @returns {String}
+   * @throws {TypeError} If `value` is not an object.
+   * @function obj
+   */
+  obj,
 };
