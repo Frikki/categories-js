@@ -13,7 +13,7 @@ test(`\`obj(undefined)\` throws \`TypeError\``, (assert) => {
   assert.end();
 });
 
-test(`\`obj(null)\` throws \`TypeError\``, (assert) => {
+test(`\`obj(null)\` returns \`null\``, (assert) => {
   const value = null;
   assert.equal(obj(value), value,
     `Failed \`null\`.`);
@@ -26,13 +26,13 @@ test(`\`obj(Function)\` throws \`TypeError\``, (assert) => {
   assert.end();
 });
 
-test(`\`obj(String)\` returns \`String\``, (assert) => {
+test(`\`obj(String)\` throws \`TypeError\``, (assert) => {
   assert.throws(obj.bind(void 0, `a string`), TypeError,
     `Failed \`String\`.`);
   assert.end();
 });
 
-test(`\`obj(Object)\` throws \`TypeError\``, (assert) => {
+test(`\`obj(Object)\` returns \`Object\``, (assert) => {
   const value = {};
   assert.equals(obj(value), value,
     `Failed \`Object\`.`);
