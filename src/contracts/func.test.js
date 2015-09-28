@@ -27,7 +27,7 @@ test(`\`func(Function)\` returns \`Function\``, (assert) => {
 });
 
 test(`\`func(String)\` throws \`TypeError\``, (assert) => {
-  assert.throws(func.bind(void 0, new String(`a string`)), TypeError,
+  assert.throws(func.bind(void 0, `a string`), TypeError,
     `Failed \`String\`.`);
   assert.end();
 });
@@ -40,25 +40,25 @@ test(`\`func(Object)\` throws \`TypeError\``, (assert) => {
 });
 
 test(`\`func(Boolean)\` throws \`TypeError\``, (assert) => {
-  assert.throws(func.bind(void 0, new Boolean(true)), TypeError,
-    `Failed \`Boolean(true)\`.`);
-  assert.throws(func.bind(void 0, new Boolean(false)), TypeError,
-    `Failed \`Boolean(false)\`.`);
+  assert.throws(func.bind(void 0, true), TypeError,
+    `Failed \`true\`.`);
+  assert.throws(func.bind(void 0, false), TypeError,
+    `Failed \`false\`.`);
   assert.end();
 });
 
 test(`\`func(Number)\` throws \`TypeError\``, (assert) => {
-  assert.throws(func.bind(void 0, new Number(0)), TypeError,
-    `Failed \`Number(0)\`.`);
-  assert.throws(func.bind(void 0, new Number(1)), TypeError,
-    `Failed \`Number(1)\`.`);
-  assert.throws(func.bind(void 0, new Number(2)), TypeError,
-    `Failed \`Number(2)\`.`);
-  assert.throws(func.bind(void 0, new Number(123)), TypeError,
-    `Failed \`Number(123)\`.`);
-  assert.throws(func.bind(void 0, new Number(-123)), TypeError,
-    `Failed \`Number(-123)\`.`);
-  assert.throws(func.bind(void 0, new Number(123.4567)), TypeError,
-    `Failed \`Number(123.4567)\`.`);
+  assert.throws(func.bind(void 0, 0), TypeError,
+    `Failed \`0\`.`);
+  assert.throws(func.bind(void 0, 1), TypeError,
+    `Failed \`1\`.`);
+  assert.throws(func.bind(void 0, 2), TypeError,
+    `Failed \`2\`.`);
+  assert.throws(func.bind(void 0, 123), TypeError,
+    `Failed \`123\`.`);
+  assert.throws(func.bind(void 0, -123), TypeError,
+    `Failed \`-123\`.`);
+  assert.throws(func.bind(void 0, 123.4567), TypeError,
+    `Failed \`123.4567\`.`);
   assert.end();
 });

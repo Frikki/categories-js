@@ -2,8 +2,7 @@ import test from 'tape';
 import any from './any';
 
 test(`\`any()\` returns \`undefined\``, (assert) => {
-  const expected = void 0;
-  assert.equal(any(), expected,
+  assert.equal(any(), void 0,
     `Failed no argument.`);
   assert.end();
 });
@@ -30,7 +29,7 @@ test(`\`any(Function)\` returns \`Function\``, (assert) => {
 });
 
 test(`\`any(String)\` returns \`String\``, (assert) => {
-  const value = new String(`a string`);
+  const value = `a string`;
   assert.equal(any(value), value,
     `Failed \`String\`.`);
   assert.end();
@@ -44,33 +43,33 @@ test(`\`any(Object)\` returns \`Object\``, (assert) => {
 });
 
 test(`\`any(Boolean)\` returns \`Boolean\``, (assert) => {
-  let value = new Boolean(true);
+  let value = true;
   assert.equal(any(value), value,
-    `Failed \`Boolean(true)\`.`);
-  value = new Boolean(false);
+    `Failed \`true\`.`);
+  value = false;
   assert.equal(any(value), value,
-    `Failed \`Boolean(false)\`.`);
+    `Failed \`false\`.`);
   assert.end();
 });
 
 test(`\`any(Number)\` returns \`Number\``, (assert) => {
-  let value = new Number(0);
+  let value = 0;
   assert.equal(any(value), value,
-    `Failed \`Number(0)\`.`);
-  value = new Number(1);
+    `Failed \`0\`.`);
+  value = 1;
   assert.equal(any(value), value,
-    `Failed \`Number(1)\`.`);
-  value = new Number(2);
+    `Failed \`1\`.`);
+  value = 2;
   assert.equal(any(value), value,
-    `Failed \`Number(2)\`.`);
-  value = new Number(123);
+    `Failed \`2\`.`);
+  value = 123;
   assert.equal(any(value), value,
-    `Failed \`Number(123)\`.`);
-  value = new Number(-123);
+    `Failed \`123\`.`);
+  value = -123;
   assert.equal(any(value), value,
-    `Failed \`Number(-123)\`.`);
-  value = new Number(123.4567);
+    `Failed \`-123\`.`);
+  value = 123.4567;
   assert.equal(any(value), value,
-    `Failed \`Number(123.4567)\`.`);
+    `Failed \`123.4567\`.`);
   assert.end();
 });
