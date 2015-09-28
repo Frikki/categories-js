@@ -2,6 +2,7 @@ import any from './contracts/any';
 import func from './contracts/func';
 import str from './contracts/str';
 import obj from './contracts/obj';
+import bool from './contracts/bool';
 
 module.exports = {
   /**
@@ -38,4 +39,13 @@ module.exports = {
    * @function obj
    */
   obj,
+
+  /**
+   * A contract that only allows booleans.
+   * @param {Function} value The value to test.
+   * @returns {String}
+   * @throws {TypeError} If `value` is not a boolean.
+   * @function bool
+   */
+  bool,
 };
