@@ -1,7 +1,7 @@
 {
   "name": "categories-js",
   "version": "0.0.0",
-  "description": "An objects and morphisms library.",
+  "description": "A contracts and functors library.",
   "main": "./lib/index.js",
   "directories": {
     "doc": "./doc",
@@ -12,9 +12,19 @@
     "src/"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src/**/. --ignore-path .gitignore",
+    "test": "npm run lint && babel-node ./src/all.test.js | faucet",
     "deps": "npm install && validate-commit-msg",
-    "start": "npm run deps"
+    "start": "npm run deps",
+    "predoc": "rm -rf doc/ && mkdir -p doc",
+    "doc": "node ./scripts/make-api-doc.js",
+    "postcompile": "find lib/ -type f -name '*.test.js' -exec rm {} +",
+    "precompile": "rm -rf lib/ && mkdir -p lib",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "patch": "git checkout master && release patch && npm publish --access=public",
+    "minor": "git checkout master && release minor && npm publish --access=public",
+    "major": "git checkout master && release major && npm publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -26,6 +36,7 @@
     "objects",
     "morphisms",
     "algebra",
+    "contracts",
     "functors"
   ],
   "author": "Frederik Krautwald",

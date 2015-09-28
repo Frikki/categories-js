@@ -49,6 +49,12 @@
           *(<?= returnTag.joinedTypes ?>)* <?= returnTag.description ?>
         <? }) ?>
       <? } ?>
+
+      <? if (comment.throwsTags.length > 0) { ?>
+        #### Exceptions:
+        <? comment.throwsTags.forEach(function(throwsTag) { ?>
+        - `<? if (throwsTag.joinedTypes) { ?><?= throwsTag.joinedTypes.replace('.', '') ?><? } ?>`<? if (throwsTag.description) { ?> <?= throwsTag.description ?><? } ?><? }) ?>
+      <? } ?>
     <? } ?>
 
     - - -

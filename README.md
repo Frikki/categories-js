@@ -1,6 +1,6 @@
 # categories-js
 
-> An objects and morphisms library.
+> A contracts and functors library.
 
 ## Installation
 
