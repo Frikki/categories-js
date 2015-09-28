@@ -13,9 +13,17 @@
   ],
   "scripts": {
     "lint": "eslint ./src/**/. --ignore-path .gitignore",
-    "test": "npm run lint && babel-node ./src/**/*.test.js | faucet",
+    "test": "npm run lint && babel-node ./src/all.test.js | faucet",
     "deps": "npm install && validate-commit-msg",
-    "start": "npm run deps"
+    "start": "npm run deps",
+    "predoc": "rm -rf doc/ && mkdir -p doc",
+    "doc": "node ./scripts/make-api-doc.js",
+    "precompile": "rm -rf lib/ && mkdir -p lib",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "patch": "git checkout master && release patch && npm publish --access=public",
+    "minor": "git checkout master && release minor && npm publish --access=public",
+    "major": "git checkout master && release major && npm publish --access=public"
   },
   "repository": {
     "type": "git",
