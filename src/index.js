@@ -35,7 +35,7 @@ module.exports = {
   /**
    * A contract that only allows objects.
    * @param {Function} value The value to test.
-   * @returns {String}
+   * @returns {Object}
    * @throws {TypeError} If `value` is not an object.
    * @function obj
    */
@@ -44,7 +44,7 @@ module.exports = {
   /**
    * A contract that only allows booleans.
    * @param {Function} value The value to test.
-   * @returns {String}
+   * @returns {Boolean}
    * @throws {TypeError} If `value` is not a boolean.
    * @function bool
    */
@@ -53,7 +53,7 @@ module.exports = {
   /**
    * A contract that only allows numbers.
    * @param {Function} value The value to test.
-   * @returns {String}
+   * @returns {Number}
    * @throws {TypeError} If `value` is not a number.
    * @function num
    */
