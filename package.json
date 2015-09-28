@@ -1,7 +1,7 @@
 {
   "name": "categories-js",
   "version": "0.0.0",
-  "description": "An objects and morphisms library.",
+  "description": "A contracts and functors library.",
   "main": "./lib/index.js",
   "directories": {
     "doc": "./doc",
@@ -26,6 +26,7 @@
     "objects",
     "morphisms",
     "algebra",
+    "contracts",
     "functors"
   ],
   "author": "Frederik Krautwald",
