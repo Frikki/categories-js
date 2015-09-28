@@ -1,9 +1,5 @@
-function func(value) {
-  if (typeof value !== `function`) {
-    throw new TypeError();
-  } else {
-    return value;
-  }
-}
+import typeOf from './typeOf';
+
+const func = typeOf(`function`);
 
 export default func;
