@@ -1,0 +1,56 @@
+{
+  "name": "categories-js",
+  "version": "0.0.0",
+  "description": "An objects and morphisms library.",
+  "main": "./lib/index.js",
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps": "npm install && validate-commit-msg",
+    "start": "npm run deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frikki/categories-js.git"
+  },
+  "keywords": [
+    "category",
+    "theory",
+    "objects",
+    "morphisms",
+    "algebra",
+    "functors"
+  ],
+  "author": "Frederik Krautwald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frikki/categories-js/issues"
+  },
+  "homepage": "https://github.com/Frikki/categories-js#readme",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "cli-release": "^1.0.3",
+    "eslint": "^1.0.0",
+    "eslint-config-cycle": "^3.0.0",
+    "eslint-plugin-cycle": "^1.0.1",
+    "eslint-plugin-no-class": "^0.1.0",
+    "faucet": "0.0.1",
+    "markdox": "^0.1.9",
+    "tape": "^4.2.0",
+    "validate-commit-message": "^3.0.1"
+  }
+}
