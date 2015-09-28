@@ -33,8 +33,7 @@ test(`\`str(String)\` returns \`String\``, (assert) => {
 });
 
 test(`\`str(Object)\` throws \`TypeError\``, (assert) => {
-  const value = {};
-  assert.throws(str.bind(void 0, value), TypeError,
+  assert.throws(str.bind(void 0, {}), TypeError,
     `Failed \`Object\`.`);
   assert.end();
 });

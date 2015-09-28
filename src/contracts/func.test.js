@@ -33,8 +33,7 @@ test(`\`func(String)\` throws \`TypeError\``, (assert) => {
 });
 
 test(`\`func(Object)\` throws \`TypeError\``, (assert) => {
-  const value = {};
-  assert.throws(func.bind(void 0, value), TypeError,
+  assert.throws(func.bind(void 0, {}), TypeError,
     `Failed \`Object\`.`);
   assert.end();
 });
