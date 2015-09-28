@@ -3,6 +3,7 @@ import func from './contracts/func';
 import str from './contracts/str';
 import obj from './contracts/obj';
 import bool from './contracts/bool';
+import num from './contracts/num';
 
 module.exports = {
   /**
@@ -48,4 +49,13 @@ module.exports = {
    * @function bool
    */
   bool,
+
+  /**
+   * A contract that only allows numbers.
+   * @param {Function} value The value to test.
+   * @returns {String}
+   * @throws {TypeError} If `value` is not a number.
+   * @function num
+   */
+  num,
 };
