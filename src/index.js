@@ -1,9 +1,9 @@
 import any from './contracts/any';
 import func from './contracts/func';
-import str from './contracts/str';
-import obj from './contracts/obj';
-import bool from './contracts/bool';
-import num from './contracts/num';
+import string from './contracts/string';
+import object from './contracts/object';
+import boolean from './contracts/boolean';
+import number from './contracts/number';
 
 module.exports = {
   /**
@@ -28,34 +28,34 @@ module.exports = {
    * @param {Function} value The value to test.
    * @returns {String}
    * @throws {TypeError} If `value` is not a string.
-   * @function str
+   * @function string
    */
-  str,
+  string,
 
   /**
    * A contract that only allows objects.
    * @param {Function} value The value to test.
    * @returns {Object}
    * @throws {TypeError} If `value` is not an object.
-   * @function obj
+   * @function object
    */
-  obj,
+  object,
 
   /**
    * A contract that only allows booleans.
    * @param {Function} value The value to test.
    * @returns {Boolean}
    * @throws {TypeError} If `value` is not a boolean.
-   * @function bool
+   * @function boolean
    */
-  bool,
+  boolean,
 
   /**
    * A contract that only allows numbers.
    * @param {Function} value The value to test.
    * @returns {Number}
    * @throws {TypeError} If `value` is not a number.
-   * @function num
+   * @function number
    */
-  num,
+  number,
 };
