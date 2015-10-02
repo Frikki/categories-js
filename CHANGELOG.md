@@ -1,3 +1,42 @@
+# v0.2.0 (2015-10-02)
+
+
+## Features
+
+- **contracts:**
+    - add contract for RegExp
+    ([9ded214e](https://github.com/Frikki/categories-js.git/commits/9ded214e745b8ea3e03149104ef8602aa73a074e))
+    - add contract for Date
+    ([0ce771d5](https://github.com/Frikki/categories-js.git/commits/0ce771d59719665f5d6c9d80136b5e6f32ce7dba))
+    - add contract for Array
+    ([3e1ba8f9](https://github.com/Frikki/categories-js.git/commits/3e1ba8f9da6d8aabac7649b983a2fe1c9c1ba760))
+    - add contract for nonnegative integers
+    ([b399d3fe](https://github.com/Frikki/categories-js.git/commits/b399d3fe0aa48ead7bb5e69203fcda341c158245))
+    - add contract for integers
+    ([2b32aebe](https://github.com/Frikki/categories-js.git/commits/2b32aebee2115030d34e40775e16363479c6a5bf))
+
+
+## Breaking Changes
+
+- **contracts:** due to [fc5acc06](https://github.com/Frikki/categories-js.git/commits/fc5acc06732afcd9cc46e0b9c787dda894de9701),
+ 
+
+Before:
+- `bool(value)`
+- `num(value)`
+- `obj(value)`
+- `str(value)`
+
+After:
+- `boolean(value)`
+- `number(value)`
+- `object(value)`
+- `str(value)`
+
+Closes #2
+
+
+
 # v0.1.1 (2015-09-28)
 
 
