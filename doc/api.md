@@ -17,6 +17,16 @@
 
 - [`int`](#int)
 
+- [`nonnegativeInteger`](#nonnegativeInteger)
+
+- [`nonnegInt`](#nonnegInt)
+
+- [`naturalNumber`](#naturalNumber)
+
+- [`natural`](#natural)
+
+- [`nat`](#nat)
+
 ### <a id="any"></a> `any(value)`
 
 A contract that allows anything.
@@ -27,7 +37,7 @@ A contract that allows anything.
 
 #### Return:
 
-*()* 
+*()* The value.
 
 - - -
 
@@ -41,7 +51,7 @@ A contract that only allows functions.
 
 #### Return:
 
-*(Function)* 
+*(Function)* The value.
 
 #### Exceptions:
 
@@ -55,11 +65,11 @@ A contract that only allows strings.
 
 #### Arguments:
 
-- `value :: Function` The value to test.
+- `value :: String` The value to test.
 
 #### Return:
 
-*(String)* 
+*(String)* The value.
 
 #### Exceptions:
 
@@ -73,11 +83,11 @@ A contract that only allows objects.
 
 #### Arguments:
 
-- `value :: Function` The value to test.
+- `value :: Object` The value to test.
 
 #### Return:
 
-*(Object)* 
+*(Object)* The value.
 
 #### Exceptions:
 
@@ -91,11 +101,11 @@ A contract that only allows booleans.
 
 #### Arguments:
 
-- `value :: Function` The value to test.
+- `value :: Boolean` The value to test.
 
 #### Return:
 
-*(Boolean)* 
+*(Boolean)* The value.
 
 #### Exceptions:
 
@@ -109,11 +119,11 @@ A contract that only allows numbers.
 
 #### Arguments:
 
-- `value :: Function` The value to test.
+- `value :: Number` The value to test.
 
 #### Return:
 
-*(Number)* 
+*(Number)* The value.
 
 #### Exceptions:
 
@@ -127,11 +137,11 @@ A contract that only allows integers.
 
 #### Arguments:
 
-- `value :: Function` The value to test.
+- `value :: Number` The value to test.
 
 #### Return:
 
-*(Number)* 
+*(Number)* The value.
 
 #### Exceptions:
 
@@ -141,7 +151,61 @@ A contract that only allows integers.
 
 ### <a id="int"></a> `int`
 
+Alias for `integer`.
+
 See: integer
+
+- - -
+
+### <a id="nonnegativeInteger"></a> `nonnegativeInteger(value)`
+
+A contract that only allows integers that are either 0 or positive,
+i.e., members of the set Z^* = {0} U Z^+, where Z^+ denotes
+the positive integers.
+
+#### Arguments:
+
+- `value :: Number` The value to test.
+
+#### Return:
+
+*(Number)* The value.
+
+#### Exceptions:
+
+- `TypeError` If `value` is not a nonnegative integer.
+
+- - -
+
+### <a id="nonnegInt"></a> `nonnegInt`
+
+Alias for `nonnegativeInteger`.
+
+See: nonnegativeInteger
+
+- - -
+
+### <a id="naturalNumber"></a> `naturalNumber`
+
+Alias for `nonnegativeInteger`.
+
+See: nonnegativeInteger
+
+- - -
+
+### <a id="natural"></a> `natural`
+
+Alias for `nonnegativeInteger`.
+
+See: nonnegativeInteger
+
+- - -
+
+### <a id="nat"></a> `nat`
+
+Alias for `nonnegativeInteger`.
+
+See: nonnegativeInteger
 
 - - -
 
