@@ -4,6 +4,7 @@ import string from './contracts/string';
 import object from './contracts/object';
 import boolean from './contracts/boolean';
 import number from './contracts/number';
+import integer from './contracts/integer';
 
 module.exports = {
   /**
@@ -58,4 +59,19 @@ module.exports = {
    * @function number
    */
   number,
+
+  /**
+   * A contract that only allows integers.
+   * @param {Function} value The value to test.
+   * @returns {Number}
+   * @throws {TypeError} If `value` is not an integer.
+   * @function integer
+   */
+  integer,
+
+  /**
+   * @see integer
+   * @func int
+   */
+  int: integer,
 };

@@ -5,13 +5,17 @@
 
 - [`func`](#func)
 
-- [`str`](#str)
+- [`string`](#string)
 
-- [`obj`](#obj)
+- [`object`](#object)
 
-- [`bool`](#bool)
+- [`boolean`](#boolean)
 
-- [`num`](#num)
+- [`number`](#number)
+
+- [`integer`](#integer)
+
+- [`int`](#int)
 
 ### <a id="any"></a> `any(value)`
 
@@ -45,7 +49,7 @@ A contract that only allows functions.
 
 - - -
 
-### <a id="str"></a> `str(value)`
+### <a id="string"></a> `string(value)`
 
 A contract that only allows strings.
 
@@ -63,7 +67,7 @@ A contract that only allows strings.
 
 - - -
 
-### <a id="obj"></a> `obj(value)`
+### <a id="object"></a> `object(value)`
 
 A contract that only allows objects.
 
@@ -81,7 +85,7 @@ A contract that only allows objects.
 
 - - -
 
-### <a id="bool"></a> `bool(value)`
+### <a id="boolean"></a> `boolean(value)`
 
 A contract that only allows booleans.
 
@@ -99,7 +103,7 @@ A contract that only allows booleans.
 
 - - -
 
-### <a id="num"></a> `num(value)`
+### <a id="number"></a> `number(value)`
 
 A contract that only allows numbers.
 
@@ -114,6 +118,30 @@ A contract that only allows numbers.
 #### Exceptions:
 
 - `TypeError` If `value` is not a number.
+
+- - -
+
+### <a id="integer"></a> `integer(value)`
+
+A contract that only allows integers.
+
+#### Arguments:
+
+- `value :: Function` The value to test.
+
+#### Return:
+
+*(Number)* 
+
+#### Exceptions:
+
+- `TypeError` If `value` is not an integer.
+
+- - -
+
+### <a id="int"></a> `int`
+
+See: integer
 
 - - -
 
