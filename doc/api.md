@@ -29,6 +29,8 @@
 
 - [`array`](#array)
 
+- [`date`](#date)
+
 ### <a id="any"></a> `any(value)`
 
 A contract that allows anything.
@@ -226,6 +228,24 @@ A contract that only allows Arrays.
 #### Exceptions:
 
 - `TypeError` If `value`is not an Array.
+
+- - -
+
+### <a id="date"></a> `date(value)`
+
+A contract that only allows Dates.
+
+#### Arguments:
+
+- `value :: Date` The value to test
+
+#### Return:
+
+*(Date)* The value.
+
+#### Exceptions:
+
+- `TypeError` If `value`is not a Date.
 
 - - -
 

@@ -7,3 +7,4 @@ import './contracts/number.test';
 import './contracts/integer.test';
 import './contracts/nonnegativeInteger.test';
 import './contracts/array.test';
+import './contracts/date.test';

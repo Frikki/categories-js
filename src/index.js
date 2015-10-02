@@ -7,6 +7,7 @@ import number from './contracts/number';
 import integer from './contracts/integer';
 import nonnegativeInteger from './contracts/nonnegativeInteger';
 import array from './contracts/array';
+import date from './contracts/date';
 
 module.exports = {
   /**
@@ -125,4 +126,13 @@ module.exports = {
    * @function array
    */
   array,
+
+  /**
+   * A contract that only allows Dates.
+   * @param {Date} value The value to test
+   * @returns {Date} The value.
+   * @throws {TypeError} If `value`is not a Date.
+   * @function date
+   */
+  date,
 };
