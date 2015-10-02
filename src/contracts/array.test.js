@@ -76,3 +76,17 @@ test(`\`array(Array)\` returns \`Array\``, (assert) => {
     `Failed \`new Array(1, 2, 3)\`.`);
   assert.end();
 });
+
+test(`\`array(Date)\` throws \`TypeError\``, (assert) => {
+  assert.throws(array.bind(void 0, new Date()), TypeError,
+    `Failed \`new Date()\`.`);
+  assert.end();
+});
+
+test(`\`array(RegExp)\` throws \`TypeError\``, (assert) => {
+  assert.throws(array.bind(void 0, new RegExp()), TypeError,
+    `Failed \`new RegExp()\`.`);
+  assert.throws(array.bind(void 0, /ab+c/), TypeError,
+    `Failed \`/ab+c/\`.`);
+  assert.end();
+});
