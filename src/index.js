@@ -4,12 +4,17 @@ import string from './contracts/string';
 import object from './contracts/object';
 import boolean from './contracts/boolean';
 import number from './contracts/number';
+import integer from './contracts/integer';
+import nonnegativeInteger from './contracts/nonnegativeInteger';
+import array from './contracts/array';
+import date from './contracts/date';
+import regExp from './contracts/regExp';
 
 module.exports = {
   /**
    * A contract that allows anything.
    * @param {*} value The value to test.
-   * @returns {*}
+   * @returns {*} The value.
    * @function any
    */
   any,
@@ -17,7 +22,7 @@ module.exports = {
   /**
    * A contract that only allows functions.
    * @param {Function} value The value to test.
-   * @returns {Function}
+   * @returns {Function} The value.
    * @throws {TypeError} If `value` is not a function.
    * @function func
    */
@@ -25,8 +30,8 @@ module.exports = {
 
   /**
    * A contract that only allows strings.
-   * @param {Function} value The value to test.
-   * @returns {String}
+   * @param {String} value The value to test.
+   * @returns {String} The value.
    * @throws {TypeError} If `value` is not a string.
    * @function string
    */
@@ -34,8 +39,8 @@ module.exports = {
 
   /**
    * A contract that only allows objects.
-   * @param {Function} value The value to test.
-   * @returns {Object}
+   * @param {Object} value The value to test.
+   * @returns {Object} The value.
    * @throws {TypeError} If `value` is not an object.
    * @function object
    */
@@ -43,8 +48,8 @@ module.exports = {
 
   /**
    * A contract that only allows booleans.
-   * @param {Function} value The value to test.
-   * @returns {Boolean}
+   * @param {Boolean} value The value to test.
+   * @returns {Boolean} The value.
    * @throws {TypeError} If `value` is not a boolean.
    * @function boolean
    */
@@ -52,10 +57,57 @@ module.exports = {
 
   /**
    * A contract that only allows numbers.
-   * @param {Function} value The value to test.
-   * @returns {Number}
+   * @param {Number} value The value to test.
+   * @returns {Number} The value.
    * @throws {TypeError} If `value` is not a number.
    * @function number
    */
   number,
+
+  /**
+   * A contract that only allows integers.
+   * @param {Number} value The value to test.
+   * @returns {Number} The value.
+   * @throws {TypeError} If `value` is not an integer.
+   * @function integer
+   */
+  integer,
+
+  /**
+   * A contract that only allows integers that are either 0 or positive,
+   * i.e., members of the set Z^* = {0} U Z^+, where Z^+ denotes
+   * the positive integers.
+   * @param {Number} value The value to test.
+   * @returns {Number} The value.
+   * @throws {TypeError} If `value` is not a nonnegative integer.
+   * @function nonnegativeInteger
+   */
+  nonnegativeInteger,
+
+  /**
+   * A contract that only allows Arrays.
+   * @param {Array} value The value to test.
+   * @returns {Array} The value.
+   * @throws {TypeError} If `value`is not an Array.
+   * @function array
+   */
+  array,
+
+  /**
+   * A contract that only allows Dates.
+   * @param {Date} value The value to test
+   * @returns {Date} The value.
+   * @throws {TypeError} If `value`is not a Date.
+   * @function date
+   */
+  date,
+
+  /**
+   * A contract that only allows regular expressions.
+   * @param {RegExp} value The value to test
+   * @returns {RegExp} The value.
+   * @throws {TypeError} If `value`is not a regular expression.
+   * @function regExp
+   */
+  regExp,
 };
