@@ -7,9 +7,8 @@ function typeOf(type) {
   return (value) => {
     if (typeof value !== type) {
       throw new TypeError(`Expected a${type === `object` ? `n` : ``} ${type}.`);
-    } else {
-      return value;
     }
+    return value;
   };
 }
 

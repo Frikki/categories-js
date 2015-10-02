@@ -27,6 +27,8 @@
 
 - [`nat`](#nat)
 
+- [`array`](#array)
+
 ### <a id="any"></a> `any(value)`
 
 A contract that allows anything.
@@ -206,6 +208,24 @@ See: nonnegativeInteger
 Alias for `nonnegativeInteger`.
 
 See: nonnegativeInteger
+
+- - -
+
+### <a id="array"></a> `array(value)`
+
+A contract that only allows Arrays.
+
+#### Arguments:
+
+- `value :: Array` The value to test.
+
+#### Return:
+
+*(Array)* The value.
+
+#### Exceptions:
+
+- `TypeError` If `value`is not an Array.
 
 - - -
 

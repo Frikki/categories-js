@@ -6,6 +6,7 @@ import boolean from './contracts/boolean';
 import number from './contracts/number';
 import integer from './contracts/integer';
 import nonnegativeInteger from './contracts/nonnegativeInteger';
+import array from './contracts/array';
 
 module.exports = {
   /**
@@ -115,4 +116,13 @@ module.exports = {
    * @func nat
    */
   nat: nonnegativeInteger,
+
+  /**
+   * A contract that only allows Arrays.
+   * @param {Array} value The value to test.
+   * @returns {Array} The value.
+   * @throws {TypeError} If `value`is not an Array.
+   * @function array
+   */
+  array,
 };
