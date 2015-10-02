@@ -8,6 +8,7 @@ import integer from './contracts/integer';
 import nonnegativeInteger from './contracts/nonnegativeInteger';
 import array from './contracts/array';
 import date from './contracts/date';
+import regExp from './contracts/regExp';
 
 module.exports = {
   /**
@@ -73,13 +74,6 @@ module.exports = {
   integer,
 
   /**
-   * Alias for `integer`.
-   * @see integer
-   * @func int
-   */
-  int: integer,
-
-  /**
    * A contract that only allows integers that are either 0 or positive,
    * i.e., members of the set Z^* = {0} U Z^+, where Z^+ denotes
    * the positive integers.
@@ -89,34 +83,6 @@ module.exports = {
    * @function nonnegativeInteger
    */
   nonnegativeInteger,
-
-  /**
-   * Alias for `nonnegativeInteger`.
-   * @see nonnegativeInteger
-   * @func nonnegInt
-   */
-  nonnegInt: nonnegativeInteger,
-
-  /**
-   * Alias for `nonnegativeInteger`.
-   * @see nonnegativeInteger
-   * @func naturalNumber
-   */
-  naturalNumber: nonnegativeInteger,
-
-  /**
-   * Alias for `nonnegativeInteger`.
-   * @see nonnegativeInteger
-   * @func natural
-   */
-  natural: nonnegativeInteger,
-
-  /**
-   * Alias for `nonnegativeInteger`.
-   * @see nonnegativeInteger
-   * @func nat
-   */
-  nat: nonnegativeInteger,
 
   /**
    * A contract that only allows Arrays.
@@ -135,4 +101,13 @@ module.exports = {
    * @function date
    */
   date,
+
+  /**
+   * A contract that only allows regular expressions.
+   * @param {RegExp} value The value to test
+   * @returns {RegExp} The value.
+   * @throws {TypeError} If `value`is not a regular expression.
+   * @function regExp
+   */
+  regExp,
 };

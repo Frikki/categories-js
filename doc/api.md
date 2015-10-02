@@ -15,21 +15,13 @@
 
 - [`integer`](#integer)
 
-- [`int`](#int)
-
 - [`nonnegativeInteger`](#nonnegativeInteger)
-
-- [`nonnegInt`](#nonnegInt)
-
-- [`naturalNumber`](#naturalNumber)
-
-- [`natural`](#natural)
-
-- [`nat`](#nat)
 
 - [`array`](#array)
 
 - [`date`](#date)
+
+- [`regExp`](#regExp)
 
 ### <a id="any"></a> `any(value)`
 
@@ -153,14 +145,6 @@ A contract that only allows integers.
 
 - - -
 
-### <a id="int"></a> `int`
-
-Alias for `integer`.
-
-See: integer
-
-- - -
-
 ### <a id="nonnegativeInteger"></a> `nonnegativeInteger(value)`
 
 A contract that only allows integers that are either 0 or positive,
@@ -178,38 +162,6 @@ the positive integers.
 #### Exceptions:
 
 - `TypeError` If `value` is not a nonnegative integer.
-
-- - -
-
-### <a id="nonnegInt"></a> `nonnegInt`
-
-Alias for `nonnegativeInteger`.
-
-See: nonnegativeInteger
-
-- - -
-
-### <a id="naturalNumber"></a> `naturalNumber`
-
-Alias for `nonnegativeInteger`.
-
-See: nonnegativeInteger
-
-- - -
-
-### <a id="natural"></a> `natural`
-
-Alias for `nonnegativeInteger`.
-
-See: nonnegativeInteger
-
-- - -
-
-### <a id="nat"></a> `nat`
-
-Alias for `nonnegativeInteger`.
-
-See: nonnegativeInteger
 
 - - -
 
@@ -246,6 +198,24 @@ A contract that only allows Dates.
 #### Exceptions:
 
 - `TypeError` If `value`is not a Date.
+
+- - -
+
+### <a id="regExp"></a> `regExp(value)`
+
+A contract that only allows regular expressions.
+
+#### Arguments:
+
+- `value :: RegExp` The value to test
+
+#### Return:
+
+*(RegExp)* The value.
+
+#### Exceptions:
+
+- `TypeError` If `value`is not a regular expression.
 
 - - -
 
