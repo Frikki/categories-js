@@ -1,44 +1,44 @@
 import test from 'tape';
 import string from './string';
 
-test(`\`string)\` throws \`TypeError\``, (assert) => {
+test(`\`string()\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0), TypeError,
     `Failed no argument.`);
   assert.end();
 });
 
-test(`\`stringundefined)\` throws \`TypeError\``, (assert) => {
+test(`\`string(undefined)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, void 0), TypeError,
     `Failed \`undefined\`.`);
   assert.end();
 });
 
-test(`\`stringnull)\` throws \`TypeError\``, (assert) => {
+test(`\`string(null)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, null), TypeError,
     `Failed \`null\`.`);
   assert.end();
 });
 
-test(`\`stringFunction)\` throws \`TypeError\``, (assert) => {
+test(`\`string(Function)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, () => {}), TypeError,
     `Failed \`Function\`.`);
   assert.end();
 });
 
-test(`\`stringString)\` returns \`String\``, (assert) => {
+test(`\`string(String)\` returns \`String\``, (assert) => {
   const value = `a string`;
   assert.equal(string(value), value,
     `Failed \`String\`.`);
   assert.end();
 });
 
-test(`\`stringObject)\` throws \`TypeError\``, (assert) => {
+test(`\`string(Object)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, {}), TypeError,
     `Failed \`Object\`.`);
   assert.end();
 });
 
-test(`\`stringBoolean)\` throws \`TypeError\``, (assert) => {
+test(`\`string(Boolean)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, true), TypeError,
     `Failed \`true\`.`);
   assert.throws(string.bind(void 0, false), TypeError,
@@ -46,7 +46,7 @@ test(`\`stringBoolean)\` throws \`TypeError\``, (assert) => {
   assert.end();
 });
 
-test(`\`stringNumber)\` throws \`TypeError\``, (assert) => {
+test(`\`string(Number)\` throws \`TypeError\``, (assert) => {
   assert.throws(string.bind(void 0, 0), TypeError,
     `Failed \`0\`.`);
   assert.throws(string.bind(void 0, 1), TypeError,
