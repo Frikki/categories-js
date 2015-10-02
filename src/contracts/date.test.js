@@ -31,7 +31,7 @@ test(`\`date(String)\` throws \`TypeError\``, (assert) => {
   assert.end();
 });
 
-test(`\`date(Object)\` returns \`Object\``, (assert) => {
+test(`\`date(Object)\` throws \`TypeError\``, (assert) => {
   assert.throws(date.bind(void 0, {}), TypeError,
     `Failed \`Object\`.`);
   assert.end();

@@ -31,7 +31,7 @@ test(`\`array(String)\` throws \`TypeError\``, (assert) => {
   assert.end();
 });
 
-test(`\`array(Object)\` returns \`Object\``, (assert) => {
+test(`\`array(Object)\` throws \`TypeError\``, (assert) => {
   assert.throws(array.bind(void 0, {}), TypeError,
     `Failed \`Object\`.`);
   assert.end();
