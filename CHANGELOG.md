@@ -1,3 +1,13 @@
+# v0.3.0 (2015-10-06)
+
+
+## Features
+
+- **contracts:** add contract generator `instanceOf`
+  ([9629969c](https://github.com/Frikki/categories-js.git/commits/9629969c764de7c794635b36a6ff03ad28164c49),
+   [#15]([object Object]/15))
+
+
 # v0.2.0 (2015-10-02)
 
 
