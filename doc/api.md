@@ -23,6 +23,8 @@
 
 - [`regExp`](#regExp)
 
+- [`instanceOf`](#instanceOf)
+
 ### <a id="any"></a> `any(value)`
 
 A contract that allows anything.
@@ -216,6 +218,20 @@ A contract that only allows regular expressions.
 #### Exceptions:
 
 - `TypeError` If `value`is not a regular expression.
+
+- - -
+
+### <a id="instanceOf"></a> `instanceOf(Ctor)`
+
+Creates a contract for an object inheriting from `Ctor`.
+
+#### Arguments:
+
+- `Ctor :: Function` The constructor function.
+
+#### Return:
+
+*(Function)* The contract.
 
 - - -
 
