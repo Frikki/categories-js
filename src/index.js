@@ -9,6 +9,7 @@ import nonnegativeInteger from './contracts/nonnegativeInteger';
 import array from './contracts/array';
 import date from './contracts/date';
 import regExp from './contracts/regExp';
+import instanceOf from './contracts/instanceOf';
 
 module.exports = {
   /**
@@ -110,4 +111,12 @@ module.exports = {
    * @function regExp
    */
   regExp,
+
+  /**
+   * Creates a contract for an object inheriting from `Ctor`.
+   * @param {Function} Ctor The constructor function.
+   * @returns {Function} The contract.
+   * @function instanceOf
+   */
+  instanceOf,
 };
