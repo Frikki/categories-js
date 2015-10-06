@@ -8,4 +8,5 @@ import './contracts/integer.test';
 import './contracts/nonnegativeInteger.test';
 import './contracts/array.test';
 import './contracts/date.test';
-import './contracts/regExp.test.js';
+import './contracts/regExp.test';
+import './contracts/instanceOf.test';
