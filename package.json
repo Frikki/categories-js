@@ -61,7 +61,7 @@
     "eslint-plugin-no-class": "0.1.0",
     "faucet": "0.0.1",
     "markdox": "0.1.10",
-    "tape": "4.2.1",
+    "tape": "4.2.2",
     "validate-commit-message": "3.0.1"
   }
 }
