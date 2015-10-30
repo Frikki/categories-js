@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "babel": "5.8.23",
-    "babelify": "6.3.0",
+    "babelify": "7.0.2",
     "browserify": "11.2.0",
     "cli-release": "1.0.3",
     "eslint": "1.0.0",
